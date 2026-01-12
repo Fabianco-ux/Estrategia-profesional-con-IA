@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EstrategIA — Estrategias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238e44ad'/%3E%3Cstop offset='1' stop-color='%233498db'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='45' fill='url(%23g)'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='40' font-family='Inter' fill='white'%3EA%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Logo" class="logo" />
+      <span class="brand-title">EstrategIA</span>
+    </div>
+    <nav class="menu">
+      <a class="menu-item" href="index.html">🏠 Dashboard</a>
+      <a class="menu-item active" href="estrategias.html">📋 Estrategias</a>
+      <a class="menu-item" href="finanzas.html">💰 Finanzas</a>
+      <a class="menu-item" href="produccion.html">🏭 Producción</a>
+      <a class="menu-item" href="marketing.html">📣 Marketing</a>
+      <a class="menu-item" href="rrhh.html">👥 RRHH</a>
+      <a class="menu-item" href="innovacion.html">💡 Innovación</a>
+      <a class="menu-item" href="cumplimiento.html">✅ Cumplimiento</a>
+    </nav>
+    <div class="sidebar-actions">
+      <label class="toggle">
+        <input type="checkbox" id="darkToggle" />
+        <span>🌙 Modo oscuro</span>
+      </label>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <a class="back-button" href="index.html">← Volver al Dashboard</a>
+    <button id="menuToggle" class="icon-btn" aria-label="Alternar menú">☰</button>
+    <h1>Estrategias</h1>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Lista de estrategias</h2>
+      <div class="module-cards">
+        <div class="card small">
+          <div class="card-header">Expansión LATAM</div>
+          <div class="card-meta">Cliente: Acme Corp</div>
+        </div>
+        <div class="card small">
+          <div class="card-header">Optimización de Costos</div>
+          <div class="card-meta">Cliente: Beta Inc</div>
+        </div>
+        <div class="card small">
+          <div class="card-header">Lanzamiento Producto X</div>
+          <div class="card-meta">Cliente: Nova LLC</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Crear nueva estrategia</h2>
+      <form id="strategyForm" class="form-grid">
+        <label>
+          <span>Nombre de estrategia</span>
+          <input type="text" name="nombre" required />
+        </label>
+        <label class="span-2">
+          <span>Descripción</span>
+          <textarea name="descripcion" rows="3" required></textarea>
+        </label>
+        <label>
+          <span>Cliente</span>
+          <input type="text" name="cliente" required />
+        </label>
+        <label>
+          <span>Módulo</span>
+          <select name="modulo" required>
+            <option value="Finanzas">Finanzas</option>
+            <option value="Producción">Producción</option>
+            <option value="Marketing">Marketing</option>
+            <option value="RRHH">RRHH</option>
+            <option value="Innovación">Innovación</option>
+            <option value="Cumplimiento">Cumplimiento</option>
+          </select>
+        </label>
+        <label class="span-2">
+          <span>Indicadores</span>
+          <textarea name="indicadores" rows="3" placeholder="KPIs, métricas..." required></textarea>
+        </label>
+        <label class="span-2">
+          <span>Datos financieros</span>
+          <textarea name="finanzas" rows="3" placeholder="Costos, ingresos, ROI..." required></textarea>
+        </label>
+
+        <div class="span-2">
+          <div class="form-subheader">Tareas</div>
+          <div id="taskList" class="task-list"></div>
+          <button type="button" id="addTask" class="btn">+ Agregar tarea</button>
+        </div>
+
+        <label class="span-2">
+          <span>Conclusión</span>
+          <textarea name="conclusion" rows="3" required></textarea>
+        </label>
+
+        <div class="form-actions span-2">
+          <button type="submit" class="btn">Crear Estrategia</button>
+          <button type="button" id="genIA" class="btn btn-light">Generar recomendación IA</button>
+          <button type="button" id="exportPDF" class="btn btn-light">Exportar PDF</button>
+        </div>
+      </form>
+
+      <div id="iaOutput" class="ia-box" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/estrategias.js"></script>
+</body>
+</html>

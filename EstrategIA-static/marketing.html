@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EstrategIA — Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Logo" class="logo" />
+      <span class="brand-title">EstrategIA</span>
+    </div>
+    <nav class="menu">
+      <a class="menu-item" href="index.html">🏠 Dashboard</a>
+      <a class="menu-item" href="estrategias.html">📋 Estrategias</a>
+      <a class="menu-item" href="finanzas.html">💰 Finanzas</a>
+      <a class="menu-item" href="produccion.html">🏭 Producción</a>
+      <a class="menu-item active" href="marketing.html">📣 Marketing</a>
+      <a class="menu-item" href="rrhh.html">👥 RRHH</a>
+      <a class="menu-item" href="innovacion.html">💡 Innovación</a>
+      <a class="menu-item" href="cumplimiento.html">✅ Cumplimiento</a>
+    </nav>
+    <div class="sidebar-actions">
+      <label class="toggle">
+        <input type="checkbox" id="darkToggle" />
+        <span>🌙 Modo oscuro</span>
+      </label>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <a class="back-button" href="index.html">← Volver al Dashboard</a>
+    <button id="menuToggle" class="icon-btn" aria-label="Alternar menú">☰</button>
+    <h1>Marketing</h1>
+  </header>
+
+  <main class="content">
+    <section>
+      <div class="module-cards">
+        <div class="card">
+          <div class="card-header">Leads</div>
+          <div class="card-value">1,240</div>
+          <div class="card-meta">+12% mensual</div>
+        </div>
+        <div class="card">
+          <div class="card-header">Conversión</div>
+          <div class="card-value">3.8%</div>
+          <div class="card-meta">Embudo total</div>
+        </div>
+        <div class="card">
+          <div class="card-header">CAC</div>
+          <div class="card-value">$ 46</div>
+          <div class="card-meta">Último periodo</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
