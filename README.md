@@ -1,4 +1,4 @@
-# EstrategIA Static
+# EstrategIA — sitio estático
 
 Sitio estático compatible con GitHub Pages y listo para incrustar en Google Sites.
 
@@ -15,22 +15,24 @@ Sitio estático compatible con GitHub Pages y listo para incrustar en Google Sit
 
 ## Publicación en GitHub Pages
 
-1. Subir esta carpeta al repositorio `Estrategia-profesional-con-IA` en la rama `main`.
-2. En GitHub: Settings → Pages.
-3. Selecciona `main` como branch y `/root` como folder.
-4. URL esperada: https://fabianco-ux.github.io/EstrategIA-static/
+1. En GitHub: Settings → Pages.
+2. Selecciona `main` como branch y `/root` como folder.
+3. URL esperada: https://fabianco-ux.github.io/Estrategia-profesional-con-IA/
 
 ## Enlaces relativos
 Todos los enlaces navegan con rutas relativas (ej: `estrategias.html`), compatibles con Pages.
 
 ## Embed en Google Sites
+
 - En Google Sites, usa Insert → Embed → By URL e ingresa:
-  - https://fabianco-ux.github.io/EstrategIA-static/
+  - https://fabianco-ux.github.io/Estrategia-profesional-con-IA/
 - Opcional (copia y pega como HTML):
 
 ```html
-<iframe src="https://fabianco-ux.github.io/EstrategIA-static/" style="width:100%;height:800px;border:0;" allowfullscreen loading="lazy"></iframe>
+<iframe src="https://fabianco-ux.github.io/Estrategia-profesional-con-IA/" style="width:100%;height:800px;border:0;" allowfullscreen loading="lazy"></iframe>
 ```
+
+- También puedes usar el archivo `embed.html` en la raíz de este repositorio para copiar la URL o el iframe con un botón.
 
 ## Personalización
 - Reemplaza `assets/logo.png` por tu logo institucional y actualiza las referencias si lo deseas.

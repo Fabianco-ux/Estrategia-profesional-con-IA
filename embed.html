@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Embed — EstrategIA</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, "Open Sans", sans-serif; margin: 24px; }
+    .code { background: #0f172a; color: #e2e8f0; padding: 14px; border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .row { display:flex; gap: 10px; align-items:center; margin-bottom: 12px; }
+    button { padding: 8px 12px; border-radius: 8px; border: 1px solid #1a237e; background: #1a237e; color: #fff; cursor: pointer; }
+    button:hover { filter: brightness(1.1); }
+    input { width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid #cbd5e1; }
+    small { color: #475569; }
+  </style>
+</head>
+<body>
+  <h1>Embed para Google Sites</h1>
+  <p>Usa esta URL en Google Sites → Insert → Embed → By URL:</p>
+  <div class="row">
+    <input id="url" readonly value="https://fabianco-ux.github.io/Estrategia-profesional-con-IA/" />
+    <button onclick="copyUrl()">Copiar URL</button>
+  </div>
+
+  <p>O usa este código HTML de iframe:</p>
+  <pre class="code" id="code"><code>&lt;iframe src="https://fabianco-ux.github.io/Estrategia-profesional-con-IA/" style="width:100%;height:800px;border:0;" allowfullscreen loading="lazy"&gt;&lt;/iframe&gt;</code></pre>
+  <button onclick="copyCode()">Copiar iframe</button>
+  <p><small>Nota: asegúrate de activar GitHub Pages en Settings → Pages con Branch <strong>main</strong> y Folder <strong>/root</strong>.</small></p>
+
+  <script>
+    function copy(text){ navigator.clipboard.writeText(text).then(()=>alert('Copiado al portapapeles')).catch(()=>alert('No se pudo copiar')); }
+    function copyUrl(){ copy(document.getElementById('url').value); }
+    function copyCode(){ copy(document.getElementById('code').innerText); }
+  </script>
+</body>
+</html>
